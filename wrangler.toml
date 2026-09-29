@@ -1,3 +1,10 @@
 name = "sveltia-cms-auth"
 main = "src/index.js"
 compatibility_date = "2023-03-24"
+
+# Variables públicas del login de Sveltia CMS. Van aquí para que cada build las
+# conserve: `wrangler deploy` borra las variables de texto que no estén en este
+# archivo. GITHUB_CLIENT_SECRET NO va aquí: es un Secret en Cloudflare.
+[vars]
+ALLOWED_DOMAINS = "www.luisfcalderon.dev"
+GITHUB_CLIENT_ID = "Ov23ctwqZ1RAqxnlySjs"
